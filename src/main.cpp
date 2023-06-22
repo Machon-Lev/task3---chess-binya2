@@ -1,6 +1,5 @@
 // Chess 
 #include "Chess.h"
-#include "Manager.h"
 
 int main()
 {
@@ -9,7 +8,6 @@ int main()
 	Chess a(board);
 	int codeResponse = 0;
 	string res = a.getInput();
-    Manager* manager = new Manager();
 	while (res != "exit")
 	{
 		/* 
@@ -26,14 +24,13 @@ int main()
 		42 - the last movement was legal, next turn 
 		*/
 
-		/*
+		/**/ 
 		{ // put your code here instead that code
-
 			cout << "code response >> ";
 			cin >> codeResponse;
 		}
-		*/
-        codeResponse = manager->playMove(res);
+		/**/
+
 		a.setCodeResponse(codeResponse);
 		res = a.getInput(); 
 	}
